@@ -45,6 +45,9 @@ form {
 	grid-area: form;
 	align-self: center;
 	justify-self: center;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .pure-button  {
