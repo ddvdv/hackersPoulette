@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Hackers Poulette Help</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="pureform/forms.css">
+		<link rel="stylesheet" type="text/css" href="pureform/perso.css">
 	</head>
 
 	<body>
@@ -14,29 +15,29 @@
 		</div>
 
 		<div class="container">
-			<form>
-				<p>
-					<label for="firstname">Prénom</label> *<br>
+			<form class="pure-form pure-form-aligned">
+				<div class="pure-control-group">
+					<label for="firstname">Prénom</label>
 					<input type="text" name="firstname" id="firstname" required>
-				</p>
+				</div>
 
-				<p>
-					<label for="lastname">Nom</label> *<br>
+				<div class="pure-control-group">
+					<label for="lastname">Nom</label>
 					<input type="text" name="lastname" id="lastname" required>
-				</p>
+				</div>
 
-				<p>
-					<label for="email">Email</label> *<br>
+				<div class="pure-control-group">
+					<label for="email">Email</label>
 					<input type="email" name="email" id="email" required>
-				</p>
+				</div>
 
-				<p>
-					<label for="emailconfirm">Confirmez votre email</label> *<br>
+				<div class="pure-control-group">
+					<label for="emailconfirm">Confirmez votre email</label>
 					<input type="email" name="email" id="emailconfirm" required>
-				</p>
+				</div>
 
-				<p>
-					<label for="country">Pays</label> *<br>
+				<div class="pure-control-group">
+					<label for="country">Pays</label>
 					<select name="country" id="country">
 					<option value="Belgique" selected="selected">Belgique </option>
 
@@ -294,35 +295,32 @@
 					<option value="Zimbabwe">Zimbabwe </option>
 
 					</select>		
-				</p>
+				</div>
 
-				<p>
-					<label for="gender">Sexe</label> *<br>
-					  <input type="radio" class="gender" name="gender" value="male" checked required> Male 
-					  <input type="radio" class="gender" name="gender" value="female" required> Female 
-					  <input type="radio" class="gender" name="gender" value="other" required> Other
-				</p>
+				<div class="pure-control-group">
+					<label for="gender">Sexe</label>
+					  <input type="radio" id="gender" name="gender" value="male" checked required> Male 
+					  <input type="radio" name="gender" value="female" required> Female 
+					  <input type="radio" name="gender" value="other" required> Other
+				</div>
 
-				<p>
-					<label for="theme">Sujet</label> *<br>
-					  <input type="radio" class="theme" name="theme" value="hardware"> Hardware 
-					  <input type="radio" class="theme" name="theme" value="software"> Software
-					  <input type="radio" class="theme" name="theme" value="configuration"> Configuration
-					  <input type="radio" class="theme" name="theme" value="other"> Other
-				</p>
+				<div class="pure-control-group">
+					<label for="theme">Sujet</label>
+					  <input type="radio" id="theme" name="theme" value="hardware"> Hardware 
+					  <input type="radio" name="theme" value="software"> Software
+					  <input type="radio" name="theme" value="configuration"> Configuration
+					  <input type="radio" name="theme" value="other"> Other
+				</div>
 
-				<p>
-				<label for="issue">Expliquez-nous votre problème</label> *<br>
+				<div class="pure-control-group">
+				<label for="issue">Expliquez-nous votre problème</label>
 	 				<textarea id="issue" name="issue" rows="10" cols="30" required placeholder="Dites-nous tout..."></textarea>
-	 			</p>
+				</div>
 
-	 			<p>
-	 				* Champs obligatoires
-	 			</p>
-
-	 			<p>
+				<div class="pure-control-group">
+					<label for="submit"></label>
 	 				<input type="submit" value="Envoyer">
-	 			</p>
+				</div>
 
 			</form>
 		</div>
