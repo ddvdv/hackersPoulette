@@ -1,8 +1,13 @@
+@font-face {
+    font-family: bellota;
+    src: url(../bellota/Bellota-Regular.otf);
+}
+
 img {
 	width: 30em;
 	height: 30em;
 }
 
 body {
-	display: grid;
+	font-family: "bellota", arial;
 }
