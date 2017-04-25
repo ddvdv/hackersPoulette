@@ -15,17 +15,29 @@
 
 		<div class="container">
 			<form>
-				<p>Prénom</p>
-				<input type="text" name="firstname">
+				<p>
+					<label for="firstname">Prénom</label><br>
+					<input type="text" name="firstname" id="firstname" required>*
+				</p>
 
-				<p>Nom</p>
-				<input type="text" name="lastname">
+				<p>
+					<label for="lastname">Nom</label><br>
+					<input type="text" name="lastname" id="lastname" required>*
+				</p>
 
-				<p>Email</p>
-				<input type="text" name="email">
+				<p>
+					<label for="email">Email</label><br>
+					<input type="email" name="email" id="email" required>*
+				</p>
 
-				<p>Pays</p>
-				<select name="pays">
+				<p>
+					<label for="email">Confirmez votre email</label><br>
+					<input type="email" name="email" id="email" required>*
+				</p>
+
+				<p>
+					<label for="country">Pays</label><br>
+					<select name="country" id="country" required>*
 					<option value="Belgique" selected="selected">Belgique </option>
 
 					<option value="Afghanistan">Afghanistan </option>
@@ -282,22 +294,31 @@
 					<option value="Zimbabwe">Zimbabwe </option>
 
 					</select>		
+				</p>
 
-				<p>Sexe</p>
-				  <input type="radio" name="gender" value="male" checked> Male 
-				  <input type="radio" name="gender" value="female"> Female 
-				  <input type="radio" name="gender" value="other"> Other
+				<p>
+					<label for="gender">Sexe</label><br>
+					  <input type="radio" id="gender" name="gender" value="male" checked required> Male 
+					  <input type="radio" id="gender" name="gender" value="female" required> Female 
+					  <input type="radio" id="gender" name="gender" value="other" required> Other
+				</p>
 
-				<p>Sujet</p>
-				  <input type="radio" name="theme" value="hardware"> Hardware 
-				  <input type="radio" name="theme" value="software"> Software
-				  <input type="radio" name="theme" value="configuration"> Configuration
-				  <input type="radio" name="theme" value="other"> Other
+				<p>
+					<label for="theme">Sujet</label><br>
+					  <input type="radio" id="theme" name="theme" value="hardware"> Hardware 
+					  <input type="radio" id="theme" name="theme" value="software"> Software
+					  <input type="radio" id="theme" name="theme" value="configuration"> Configuration
+					  <input type="radio" id="theme" name="theme" value="other"> Other
+				</p>
 
- 				<p>Expliquez-nous votre problème</p>
-	 				<textarea name="message" rows="10" cols="30">
-	 				</textarea>
+				<p>
+				<label for="issue">Expliquez-nous votre problème</label><br>
+	 				<textarea id="issue" name="issue" rows="10" cols="30" required placeholder="Dites-nous tout..."></textarea>
+	 			</p>
+
 	 			<p>
+	 				* Champs obligatoires
+	 			</p>
 
 	 			<p>
 	 				<input type="submit" value="Envoyer">
