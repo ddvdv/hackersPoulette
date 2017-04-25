@@ -3,11 +3,50 @@
     src: url(../bellota/Bellota-Regular.otf);
 }
 
-img {
-	width: 30em;
-	height: 30em;
-}
 
 body {
 	font-family: "bellota", arial;
+	background-color: #303030;
+	color: #FFF;
+	display: grid;
+	grid-template-columns: 1fr 900px 1fr;
+	grid-template-rows: 200px 150px 1fr;
+	grid-template-areas:	" header header header "
+                       		" . titre . "
+                       		" . form . "
+}
+
+
+
+.header {
+	min-height: 100%;
+	padding-top: 20%;
+	padding-bottom: 65%;
+	margin-bottom: 40%;
+	background-color: #FFF;
+	grid-area: header;
+	align-self: center;
+}
+
+.logo {
+	width: 30em;
+	position: absolute;
+	left: 50%;
+	margin-left: -15em;
+}
+
+.titre {
+	grid-area: titre;
+	align-self: center;
+	justify-self: center;
+}
+
+form {
+	grid-area: form;
+	align-self: center;
+	justify-self: center;
+}
+
+.pure-button  {
+	background-color: #15c5bd;
 }
