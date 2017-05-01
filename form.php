@@ -299,13 +299,13 @@
 
 				<div class="pure-control-group">
 					<label for="gender">Sexe</label>
-					  <input type="radio" id="gender" name="gender" value="male" checked required> Homme 
-					  <input type="radio" name="gender" value="female" required> Femme 
-					  <input type="radio" name="gender" value="other" required> Autre
+						  <input type="radio" id="gender" name="gender" value="male" checked required> Homme 
+						  <input type="radio" name="gender" value="female" required> Femme 
+						  <input type="radio" name="gender" value="other" required> Autre
 				</div>
 
 				<div class="pure-control-group">
-					<label for="theme">Sujet</label>
+					<label class="theme" for="theme">Sujet</label>
 					  <input type="radio" id="theme" name="theme" value="hardware"> Hardware 
 					  <input type="radio" name="theme" value="software"> Software
 					  <input type="radio" name="theme" value="configuration"> Configuration

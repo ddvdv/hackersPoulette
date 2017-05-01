@@ -53,3 +53,11 @@ form {
 .pure-button  {
 	background-color: #15c5bd;
 }
+
+label .theme {
+	flex-basis: auto;
+}
+
+.sexe {
+	max-width: 200px;
+}
