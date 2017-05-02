@@ -13,10 +13,14 @@ body {
 	grid-template-rows: 200px 150px 1fr;
 	grid-template-areas:	" header header header "
                        		" . titre . "
-                       		" . form . "
+                       		" . content . "
 }
 
 
+a:link, a:visited {
+	color: #FFF;
+	text-decoration: underline;
+}
 
 .header {
 	min-height: 100%;
@@ -41,8 +45,8 @@ body {
 	justify-self: center;
 }
 
-form {
-	grid-area: form;
+form, .content {
+	grid-area: content;
 	align-self: center;
 	justify-self: center;
 	width: 700px;
