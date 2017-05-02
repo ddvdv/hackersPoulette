@@ -33,7 +33,7 @@
 			<p>Chère <?php echo $prof ?>, </p>
 
 			<p>
-				Je vous prie d'excuser l'absence ce <?php echo date('j F Y'); ?>, du fruit de mes entrailles, <?php echo $prenom ?>.
+				Je vous prie d'excuser l'absence ce <?php echo date(d m y); ?>, du fruit de mes entrailles, <?php echo $prenom ?>.
 			</p>
 
 			<p>
@@ -66,7 +66,7 @@
 
 				<p>
 				Le père de <?php echo $prenom ?>  <br>
-				Signature le <?php echo date('j F Y'); ?>
+				Signature le <?php echo (strftime("%A %d %B")); ?>
 				</p>
 
 
