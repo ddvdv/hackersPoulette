@@ -15,7 +15,7 @@
 
 			<h1 class="titre">Notre service technique à la rescousse</h1>
 
-			<form class="pure-form pure-form-aligned pure-g">
+			<form class="pure-form pure-form-aligned pure-g" method="get" action="receiver.php">
 				<div class="pure-control-group">
 					<label for="firstname">Prénom</label>
 					<input class="pure-input-1-2" type="text" name="firstname" id="firstname" required>

@@ -33,7 +33,11 @@
 			<p>Chère <?php echo $prof ?>, </p>
 
 			<p>
+<<<<<<< HEAD:excuse.php
 				Je vous prie d'excuser l'absence ce <?php echo date(d m y); ?>, du fruit de mes entrailles, <?php echo $prenom ?>.
+=======
+				Je vous prie d'excuser l'absence ce <?php echo date('d m y'); ?>, du fruit de mes entrailles, <?php echo $prenom ?>.
+>>>>>>> master:exo php/excuse.php
 			</p>
 
 			<p>
@@ -66,7 +70,11 @@
 
 				<p>
 				Le père de <?php echo $prenom ?>  <br>
+<<<<<<< HEAD:excuse.php
 				Signature le <?php echo (strftime("%A %d %B")); ?>
+=======
+				Signature le <?php echo date('d m y'); ?>
+>>>>>>> master:exo php/excuse.php
 				</p>
 
 
