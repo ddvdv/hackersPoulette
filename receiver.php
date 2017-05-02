@@ -78,6 +78,9 @@
 			 		die("Veuillez entrer un message pour expliquer votre problème");
 			 	}
 
+			 	//Affichage du formulaire
+			 	print_r($_GET);
+
 			}
 			else {
 				echo "Merci de"?> <a href="form.php">remplir le formulaire</a> <?php echo "avant d'accéder à cette page" ;
