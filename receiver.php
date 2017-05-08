@@ -17,73 +17,53 @@
 
 			<div class="content">
  
- <!--
-			Si le formulaire a été soumis:
-			  L nettoie chaque champ.
-			  L vérifie que chacun des champs obligatoires n'est pas vide (un à la fois).
-			  L à la moindre erreur, provoque un arrêt critique via la fonction die("Message d'erreur.");
-			  (va voir la doc pour savoir ce qu'elle fait.)
-			Sinon, affiche simplement le formulaire.
--->
 			<?php 
 
-			// Vérification que GET n'est pas vide
-			if (!empty($_GET)) {
-				// Validation du prénom
-			 	if ($_GET['firstname'] != "") {
-			 		$firstname = filter_var($_GET['firstname'], FILTER_SANITIZE_STRING);
-			 		if ($firstname == "") {
-			 			die("Veuillez renseigner votre prénom dans un format valide");
-			 		}
-			 		else {}
-			 	} 
-			 	
-			 	else {
-			 		die("Veuillez renseigner votre prénom");
-			 	}
+			// Fonction de vérification d'un champ type string
+			function verifString($key, $value){
+				//Sanitazation du champ
+		 		$value = filter_var($value, FILTER_SANITIZE_STRING);
+		 		//Vérification que le champ n'est pas vide
+	 			if ($value == "") {
+		 			die("Veuillez renseigner le champ " . $key . " dans un format valide.");
+		 		}
+		 		echo "<p>" . $key . ":  " . $value . "</p>";
+		 	}
 
-			 	// Validation du nom
-			 	if ($_GET['lastname'] != "") {
-			 		$lastname = filter_var($_GET['lastname'], FILTER_SANITIZE_STRING);
-			 		if ($lastname == "") {
-			 			die("Veuillez renseigner votre nom dans un format valide");
-			 		} 
-			 		else {}
-			 	}
-			 	else {
-			 		die("Veuillez renseigner votre nom");
-			 	}
-			 	//Validation de l'adresse email
-			 	if ($_GET['email'] != "") {
-			 		$email = filter_var($_GET['email'], FILTER_SANITIZE_EMAIL);
-			 		if ($email != filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
-			 			die("Veuillez renseigner une adresse email dans un format valide");
-			 		}
-			 		else {}
-			 	}
-			 	else {
-			 		die("Veuillez renseigner une adresse email");
-			 	}
+			// Fonction de vérification d'un email
+			function verifEmail($key, $value){
+				//Sanitazation du champ
+	 			$value = filter_var($value, FILTER_SANITIZE_EMAIL);
+	 			//Validation format email
+		 		if ($value != filter_var($_GET['email'], FILTER_VALIDATE_EMAIL)) {
+		 			die("Veuillez renseigner votre adresse email dans un format valide.");
+		 		}
+		 		echo "<p>" . $key . ":  " . $value . "</p>";
+		 	}
 
-			 	//Validation du champ texte
-			 	if ($_GET['issue'] != "") {
-			 		$issue = filter_var($_GET['issue'], FILTER_SANITIZE_STRING);
-			 		if ($issue == "") {
-			 			die("Veuillez entrer un message valide pour expliquer votre problème");
-			 		}
-			 		else {}
-			 	} 
-			 	
-			 	else {
-			 		die("Veuillez entrer un message pour expliquer votre problème");
-			 	}
+		 	// Vérification que les adresses emails sont identiques
+		 	if (isset($_GET['email']) AND isset($_GET['emailConfirm'])) {
+		 		if ($_GET['email'] != $_GET['emailConfirm']){
+		 			die("Les adresses emails renseignées ne sont pas identiques. <br>");
+		 		}
+		 	}
+		 	// Si GET est set, 
+		 	if (isset($_GET['email']) AND isset($_GET['emailConfirm'])) {
+		 		// lancer une boucle pour vérification de chaque champ
+		 		foreach ($_GET as $key => $value) {
+					// Pour chaque champ GET, voir si 'email' et faire les vérif en fonction
+					if ($key == 'email' OR $key == 'emailConfirm') {
+						verifEmail($key, $value);
+					}
+					else {
+						verifString($key, $value);
+					}
+				}
+		 	}
 
-			 	//Affichage du formulaire
-			 	print_r($_GET);
-
-			}
+			// Si GET n'est pas set, réorienter vers form
 			else {
-				echo "Merci de"?> <a href="form.php">remplir le formulaire</a> <?php echo "avant d'accéder à cette page" ;
+				echo "Merci de" ?> <a href="form.php">remplir le formulaire</a> <?php echo "avant d'accéder à cette page" ;
 			}
 
 			?>
