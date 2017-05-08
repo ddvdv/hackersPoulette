@@ -15,7 +15,7 @@
 
 			<h1 class="titre">Merci pour votre feed-back</h1>
 
-			<div class="content">
+			<div class="content" style="text-align: center !important">
  
 			<?php 
 
@@ -48,7 +48,7 @@
 		 		}
 		 	}
 		 	// Si GET est set, 
-		 	if (isset($_GET['email']) AND isset($_GET['emailConfirm'])) {
+		 	if (isset($_GET['email']) AND !isset($_GET['honey'])) {
 		 		// lancer une boucle pour vérification de chaque champ
 		 		foreach ($_GET as $key => $value) {
 					// Pour chaque champ GET, voir si 'email' et faire les vérif en fonction
@@ -59,6 +59,8 @@
 						verifString($key, $value);
 					}
 				}
+			 	mail('vdv.david@gmail.com', 'test php', 'contenu du message');
+		
 		 	}
 
 			// Si GET n'est pas set, réorienter vers form

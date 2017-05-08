@@ -317,6 +317,9 @@
 	 				<textarea class="pure-input-1-2" id="issue" name="issue" rows="10" cols="80" required placeholder="Dites-nous tout..."></textarea>
 				</div>
 
+				<!-- Honey! -->
+				<input class="honey" type="text">
+
 				<div class="pure-control-group">
 					<label for="submit"></label>
 	 				<button class="pure-button" type="submit" value="send">Envoyer</button>

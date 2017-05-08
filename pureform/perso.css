@@ -22,6 +22,10 @@ a:link, a:visited {
 	text-decoration: underline;
 }
 
+.honey{
+	display: none !important;
+}
+
 .header {
 	min-height: 100%;
 	padding-top: 20%;
