@@ -32,8 +32,8 @@
 				</div>
 
 				<div class="pure-control-group">
-					<label for="emailconfirm">Confirmez votre email</label>
-					<input class="pure-input-1-2" type="email" name="email" id="emailconfirm" required>
+					<label for="emailConfirm">Confirmez votre email</label>
+					<input class="pure-input-1-2" type="email" name="emailConfirm" id="emailConfirm" required>
 				</div>
 
 				<div class="pure-control-group">
