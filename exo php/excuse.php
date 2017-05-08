@@ -66,7 +66,11 @@
 
 				<p>
 				Le père de <?php echo $prenom ?>  <br>
+<<<<<<< HEAD:exo php/excuse.php
 				Signature le <?php echo date('d m y'); ?>
+=======
+				Signature le <?php echo (strftime("%A %d %B")); ?>
+>>>>>>> 4f5eafdeafebde255f1039781f2152319b5b2e70:excuse.php
 				</p>
 
 
