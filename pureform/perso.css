@@ -10,7 +10,7 @@ body {
 	color: #FFF;
 	display: grid;
 	grid-template-columns: 1fr 900px 1fr;
-	grid-template-rows: 200px 150px 1fr;
+	grid-template-rows: 30em 150px 1fr;
 	grid-template-areas:	" header header header "
                        		" . titre . "
                        		" . content . "
@@ -27,20 +27,19 @@ a:link, a:visited {
 }
 
 .header {
-	min-height: 100%;
-	padding-top: 20%;
-	padding-bottom: 65%;
-	margin-bottom: 40%;
+	max-height: 100%;
 	background-color: #FFF;
 	grid-area: header;
 	align-self: center;
 }
 
 .logo {
-	width: 30em;
-	position: absolute;
+	width: 20em;
+	position: relative;
+	top: 0px;
 	left: 50%;
-	margin-left: -15em;
+	margin-left: -10em;
+	z-index: 1;
 }
 
 .titre {
